@@ -8,7 +8,7 @@ struct APIClient
     {
         var components = URLComponents(url:baseURL.appendingPathComponent("userId"),
                                        resolvingAgainstBaseURL: false)!
-        if let usreId = userId
+        if let userId = userId
         {
             components.queryItems = [URLQueryItem(name:"userId", value:String(userId))]
         }

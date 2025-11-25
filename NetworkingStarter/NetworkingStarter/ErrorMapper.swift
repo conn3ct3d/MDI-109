@@ -36,7 +36,7 @@ func mapError(_ error: Error) -> NetError
     {
         return .decoding
     }
-    if let err = error as NSError?, err.domain == NSURLErorDomain
+    if let err = error as NSError?, err.domain == NSURLErrorDomain
     {
         return .url(URLError.Code(rawValue:err.code))
     }
